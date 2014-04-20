@@ -173,7 +173,7 @@ Boon wins. Groovy 2.3 comes in second.
 
  * Boon 1st
  * Groovy 2nd
- * Jackson 3rd
+ * GSON 3rd
 
 
 | Benchmark | (dataStyle) | (resourceName) | Mode | Samples | Mean | Mean error | Units |
@@ -195,22 +195,22 @@ Boon beats Jacskon by over 3x, Groovy 2.3 almost ties Boon.
 | Benchmark | (dataStyle) | (resourceName) | Mode | Samples | Mean | Mean error | Units |
 |:---|---:|---:|---:|---:|---:|---:|---:|
 | jackson | N/A | user | thrpt | 20 | 25109.072 | 225.116 | ops/s |
-| gson | N/A | user | thrpt | 20 | 26982.245 | 282.070 | ops/s |
-| boon | N/A | user | thrpt | 20 | 72529.259 | 687.818 | ops/s |
-| groovy | N/A | user | thrpt | 20 | 2338.934 | 19.511 | ops/s |
+| gson | N/A | user | thrpt | 20    | 26982.245 | 282.070 | ops/s |
+| boon | N/A | user | thrpt | 20    | 72529.259 | 687.818 | ops/s |
+| groovy | N/A | user | thrpt | 20  | 2338.934 | 19.511 | ops/s |
 | groovy-2.3 | N/A | user | thrpt | 20 | 64431.577 | 1037.016 | ops/s |
 
 Boon beats Jackson by 3x. Groovy 2.3 beats Jackson by 2x.
 
  * Boon 1st
  * Groovy 2.3 2nd
- * Jackson 3rd
+ * GSON 3rd
 
 
 | Benchmark | (dataStyle) | (resourceName) | Mode | Samples | Mean | Mean error | Units |
 |:---|---:|---:|---:|---:|---:|---:|---:|
 | jackson | N/A | request | thrpt | 20 | 90,009.471 | 941.871 | ops/s |
-| gson | N/A | request | thrpt | 20 | 268,988.905 | 2165.099 | ops/s |
+| gson | N/A | request | thrpt | 20    | 268,988.905 | 2165.099 | ops/s |
 | boon | N/A | request | thrpt | 20 | 672,907.357 | 8514.806 | ops/s |
 | groovy | N/A | request | thrpt | 20 | 26497.332 | 196.347 | ops/s |
 | groovy-2.3 | N/A | request | thrpt | 20 | 762,926.213 | 5930.640 | ops/s |
