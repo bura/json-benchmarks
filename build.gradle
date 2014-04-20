@@ -1,0 +1,47 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'shadow'
+apply plugin: 'distribution'
+
+buildDir = 'target'
+
+sourceCompatibility = '1.7'
+targetCompatibility = '1.7'
+
+ext.groovyVersion = System.properties.getProperty('groovyVersion', '2.2.2') // 2.2.2 by default
+println "Groovy version: ${groovyVersion}" 
+
+dependencies {
+    compile "org.codehaus.groovy:groovy-all:${groovyVersion}"
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.3.3'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'io.fastjson:boon:0.13'
+
+    compile 'org.openjdk.jmh:jmh-core:0.5.6'
+    compile 'org.openjdk.jmh:jmh-generator-annprocess:0.5.6'
+}
+
+repositories {
+    jcenter()
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:0.8'
+    }
+}
+
+shadow {
+    outputFile = new File("${buildDir}/benchmarks.jar")
+
+    transformer(com.github.jengelman.gradle.plugins.shadow.transformers.ManifestResourceTransformer) {
+        mainClass = 'org.openjdk.jmh.Main'
+    }
+}
+
+task createGradleWrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}
