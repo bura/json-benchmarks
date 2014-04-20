@@ -45,9 +45,9 @@ On deserialization were tested only transformation from [String](http://docs.ora
 Jackson wins but it is almost a tie between Jackson and Boon.
 Groovy 2.3 close on the heels of Boon and Jackson.
 
-Jackson 1st
-Boon 2nd
-Groovy 2.3 3rd
+ * Jackson 1st
+ * Boon 2nd
+ * Groovy 2.3 3rd
 
 
 
@@ -63,9 +63,9 @@ Groovy 2.3 3rd
 Boon wins by a wide margin.
 Groovy 2.3 beats Jackson.
 
-Boon 1st
-Groovy 2.3 2nd
-Jackson 3rd
+ * Boon 1st
+ * Groovy 2.3 2nd
+ * Jackson 3rd
 
 | Benchmark | (dataStyle) | (resourceName) | Mode | Samples | Mean | Mean error | Units |
 |:---|---:|---:|---:|---:|---:|---:|---:|
@@ -78,9 +78,9 @@ Jackson 3rd
 Boon wins by a wide margin.
 Groovy 2.3 very close to Jackson, but Jackson wins.
 
-Boon 1st
-Jackson 2nd
-Groovy 2.3 3rd
+ * Boon 1st
+ * Jackson 2nd
+ * Groovy 2.3 3rd
 
 
 | Benchmark | (dataStyle) | (resourceName) | Mode | Samples | Mean | Mean error | Units |
@@ -93,9 +93,9 @@ Groovy 2.3 3rd
 
 Both Jackson and Groovy 2.3 beat Boon by 2x! Groovy 2.3 beats Jackson but almost a tie.
 
-Jackson 1st
-Groovy 2.3 2nd
-Boon 3rd
+ * Jackson 1st
+ * Groovy 2.3 2nd
+ * Boon 3rd
 
 | Benchmark | (dataStyle) | (resourceName) | Mode | Samples | Mean | Mean error | Units |
 |:---|---:|---:|---:|---:|---:|---:|---:|
@@ -108,9 +108,9 @@ Boon 3rd
 Jackson and Boon are neck and neck, but Jackson wins.
 Groovy 2.3 tight on the heels of Jackson and Boon.
 
-Jackson 1st
-Boon 2nd
-Groovy 2.3 3rd
+ * Jackson 1st
+ * Boon 2nd
+ * Groovy 2.3 3rd
 
 | Benchmark | (dataStyle) | (resourceName) | Mode | Samples | Mean | Mean error | Units |
 |:---|---:|---:|---:|---:|---:|---:|---:|
@@ -122,9 +122,9 @@ Groovy 2.3 3rd
 
 Boon wins by a wide margin. Groovy 2.3 beats Jackson but it is a close race.
 
-Boon 1st
-Groovy 2.3 2nd
-Jackson 3rd
+ * Boon 1st
+ * Groovy 2.3 2nd
+ * Jackson 3rd
 
 | Benchmark | (dataStyle) | (resourceName) | Mode | Samples | Mean | Mean error | Units |
 |:---|---:|---:|---:|---:|---:|---:|---:|
@@ -137,9 +137,9 @@ Jackson 3rd
 Boon wins by a wide margin. Groovy 2.3 and Jackson are really close, but Jackson wins.
 
 
-Boon 1st
-Jackson 2nd
-Groovy 2.3 3rd
+ * Boon 1st
+ * Jackson 2nd
+ * Groovy 2.3 3rd
 
 
 | Benchmark | (dataStyle) | (resourceName) | Mode | Samples | Mean | Mean error | Units |
@@ -154,9 +154,9 @@ Groovy 2.3 3rd
 Jackson and Groovy 2.3 beat Boon by 2x.
 
 
-Groovy 2.3 1st
-Jackson 2nd
-Boon 3rd
+ * Groovy 2.3 1st
+ * Jackson 2nd
+ * Boon 3rd
 
 ### Deserialization
 
@@ -171,9 +171,9 @@ Boon 3rd
 
 Boon wins. Groovy 2.3 comes in second.
 
-Boon 1st
-Groovy 2nd
-Jackson 3rd
+ * Boon 1st
+ * Groovy 2nd
+ * Jackson 3rd
 
 
 | Benchmark | (dataStyle) | (resourceName) | Mode | Samples | Mean | Mean error | Units |
@@ -187,9 +187,9 @@ Jackson 3rd
 
 Boon beats Jacskon by over 3x, Groovy 2.3 almost ties Boon.
 
-Boon 1st
-Groovy 2.3 2nd
-Jackson 3rd
+ * Boon 1st
+ * Groovy 2.3 2nd
+ * Jackson 3rd
 
 
 | Benchmark | (dataStyle) | (resourceName) | Mode | Samples | Mean | Mean error | Units |
@@ -202,9 +202,9 @@ Jackson 3rd
 
 Boon beats Jackson by 3x. Groovy 2.3 beats Jackson by 2x.
 
-Boon 1st
-Groovy 2.3 2nd
-Jackson 3rd
+ * Boon 1st
+ * Groovy 2.3 2nd
+ * Jackson 3rd
 
 
 | Benchmark | (dataStyle) | (resourceName) | Mode | Samples | Mean | Mean error | Units |
@@ -217,9 +217,9 @@ Jackson 3rd
 
 Jackson comes in fourth. Groovy 2.3 comes in 1st. Boon comes in second.
 
-Groovy 2.3 1st
-Boon 2nd
-GSON 3rd
+ * Groovy 2.3 1st
+ * Boon 2nd
+ * GSON 3rd
 
 
 
