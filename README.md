@@ -53,54 +53,54 @@ On deserialization were tested only transformation from [String](http://docs.ora
 
 | Benchmark | (dataStyle) | (resourceName) | Mode | Samples | Mean | Mean error | Units |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| o.b.b.j.SerializationBenchmarks.jackson | pojo | user | thrpt | 20 | 52324.635 | 359.331 | ops/s |
-| o.b.b.j.SerializationBenchmarks.gson | pojo | user | thrpt | 20 | 22010.943 | 208.352 | ops/s |
-| o.b.b.j.SerializationBenchmarks.boon | pojo | user | thrpt | 20 | 241065.787 | 1764.331 | ops/s |
-| o.b.b.j.SerializationBenchmarks.groovy | pojo | user | thrpt | 20 | 1751.394 | 14.458 | ops/s |
-| o.b.b.j.SerializationBenchmarks.groovy-2.3 | pojo | user | thrpt | 20 | 47781.079 | 370.971 | ops/s |
+| jackson | pojo | user | thrpt | 20 | 52324.635 | 359.331 | ops/s |
+| gson | pojo | user | thrpt | 20 | 22010.943 | 208.352 | ops/s |
+| boon | pojo | user | thrpt | 20 | 241065.787 | 1764.331 | ops/s |
+| groovy | pojo | user | thrpt | 20 | 1751.394 | 14.458 | ops/s |
+| groovy-2.3 | pojo | user | thrpt | 20 | 47781.079 | 370.971 | ops/s |
 
 
 | Benchmark | (dataStyle) | (resourceName) | Mode | Samples | Mean | Mean error | Units |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| o.b.b.j.SerializationBenchmarks.jackson | pojo | request | thrpt | 20 | 629985.135 | 8049.270 | ops/s |
-| o.b.b.j.SerializationBenchmarks.gson | pojo | request | thrpt | 20 | 267811.451 | 4064.942 | ops/s |
-| o.b.b.j.SerializationBenchmarks.boon | pojo | request | thrpt | 20 | 344047.795 | 3447.635 | ops/s |
-| o.b.b.j.SerializationBenchmarks.groovy | pojo | request | thrpt | 20 | 28826.587 | 302.826 | ops/s |
-| o.b.b.j.SerializationBenchmarks.groovy-2.3 | pojo | request | thrpt | 20 | 649596.700 | 6931.673 | ops/s |
+| jackson | pojo | request | thrpt | 20 | 629985.135 | 8049.270 | ops/s |
+| gson | pojo | request | thrpt | 20 | 267811.451 | 4064.942 | ops/s |
+| boon | pojo | request | thrpt | 20 | 344047.795 | 3447.635 | ops/s |
+| groovy | pojo | request | thrpt | 20 | 28826.587 | 302.826 | ops/s |
+| groovy-2.3 | pojo | request | thrpt | 20 | 649596.700 | 6931.673 | ops/s |
 
 
 | Benchmark | (dataStyle) | (resourceName) | Mode | Samples | Mean | Mean error | Units |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| o.b.b.j.SerializationBenchmarks.jackson | maplist | citys | thrpt | 20 | 27.027 | 0.686 | ops/s |
-| o.b.b.j.SerializationBenchmarks.gson | maplist | citys | thrpt | 20 | 15.997 | 0.196 | ops/s |
-| o.b.b.j.SerializationBenchmarks.boon | maplist | citys | thrpt | 20 | 25.057 | 0.371 | ops/s |
-| o.b.b.j.SerializationBenchmarks.groovy | maplist | citys | thrpt | 20 | 1.635 | 0.073 | ops/s |
-| o.b.b.j.SerializationBenchmarks.groovy-2.3 | maplist | citys | thrpt | 20 | 19.682 | 0.435 | ops/s |
+| jackson | maplist | citys | thrpt | 20 | 27.027 | 0.686 | ops/s |
+| gson | maplist | citys | thrpt | 20 | 15.997 | 0.196 | ops/s |
+| boon | maplist | citys | thrpt | 20 | 25.057 | 0.371 | ops/s |
+| groovy | maplist | citys | thrpt | 20 | 1.635 | 0.073 | ops/s |
+| groovy-2.3 | maplist | citys | thrpt | 20 | 19.682 | 0.435 | ops/s |
 
 | Benchmark | (dataStyle) | (resourceName) | Mode | Samples | Mean | Mean error | Units |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| o.b.b.j.SerializationBenchmarks.jackson | maplist | repos | thrpt | 20 | 644.717 | 9.192 | ops/s |
-| o.b.b.j.SerializationBenchmarks.gson | maplist | repos | thrpt | 20 | 403.760 | 4.575 | ops/s |
-| o.b.b.j.SerializationBenchmarks.boon | maplist | repos | thrpt | 20 | 24173.738 | 216.084 | ops/s |
-| o.b.b.j.SerializationBenchmarks.groovy | maplist | repos | thrpt | 20 | 44.343 | 0.253 | ops/s |
-| o.b.b.j.SerializationBenchmarks.groovy-2.3 | maplist | repos | thrpt | 20 | 653.402 | 9.880 | ops/s |
+| jackson | maplist | repos | thrpt | 20 | 644.717 | 9.192 | ops/s |
+| gson | maplist | repos | thrpt | 20 | 403.760 | 4.575 | ops/s |
+| boon | maplist | repos | thrpt | 20 | 24173.738 | 216.084 | ops/s |
+| groovy | maplist | repos | thrpt | 20 | 44.343 | 0.253 | ops/s |
+| groovy-2.3 | maplist | repos | thrpt | 20 | 653.402 | 9.880 | ops/s |
 
 | Benchmark | (dataStyle) | (resourceName) | Mode | Samples | Mean | Mean error | Units |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| o.b.b.j.SerializationBenchmarks.jackson | maplist | user | thrpt | 20 | 51317.860 | 590.524 | ops/s |
-| o.b.b.j.SerializationBenchmarks.gson | maplist | user | thrpt | 20 | 21844.772 | 246.724 | ops/s |
-| o.b.b.j.SerializationBenchmarks.boon | maplist | user | thrpt | 20 | 235728.318 | 2876.144 | ops/s |
-| o.b.b.j.SerializationBenchmarks.groovy | maplist | user | thrpt | 20 | 1802.383 | 15.716 | ops/s |
-| o.b.b.j.SerializationBenchmarks.groovy-2.3 | maplist | user | thrpt | 20 | 47497.203 | 526.286 | ops/s |
+| jackson | maplist | user | thrpt | 20 | 51317.860 | 590.524 | ops/s |
+| gson | maplist | user | thrpt | 20 | 21844.772 | 246.724 | ops/s |
+| boon | maplist | user | thrpt | 20 | 235728.318 | 2876.144 | ops/s |
+| groovy | maplist | user | thrpt | 20 | 1802.383 | 15.716 | ops/s |
+| groovy-2.3 | maplist | user | thrpt | 20 | 47497.203 | 526.286 | ops/s |
 
 
 | Benchmark | (dataStyle) | (resourceName) | Mode | Samples | Mean | Mean error | Units |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| o.b.b.j.SerializationBenchmarks.jackson | maplist | request | thrpt | 20 | 616497.013 | 8990.165 | ops/s |
-| o.b.b.j.SerializationBenchmarks.gson | maplist | request | thrpt | 20 | 268005.642 | 2219.178 | ops/s |
-| o.b.b.j.SerializationBenchmarks.boon | maplist | request | thrpt | 20 | 353171.065 | 2502.621 | ops/s |
-| o.b.b.j.SerializationBenchmarks.groovy | maplist | request | thrpt | 20 | 28985.824 | 459.033 | ops/s |
-| o.b.b.j.SerializationBenchmarks.groovy-2.3 | maplist | request | thrpt | 20 | 630975.802 | 4892.114 | ops/s |
+| jackson | maplist | request | thrpt | 20 | 616497.013 | 8990.165 | ops/s |
+| gson | maplist | request | thrpt | 20 | 268005.642 | 2219.178 | ops/s |
+| boon | maplist | request | thrpt | 20 | 353171.065 | 2502.621 | ops/s |
+| groovy | maplist | request | thrpt | 20 | 28985.824 | 459.033 | ops/s |
+| groovy-2.3 | maplist | request | thrpt | 20 | 630975.802 | 4892.114 | ops/s |
 
 ### Deserialization
 
