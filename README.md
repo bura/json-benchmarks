@@ -30,6 +30,59 @@ On deserialization were tested only transformation from [String](http://docs.ora
 ./gradlew clean && ./gradlew shadow -DgroovyVersion="2.2.2" && java -Xmx2048m -jar target/benchmarks.jar ".*Benchmarks.*" -f 1
 ```
 
+## Summary
+
+
+ * Boon is in 1st place with 28 points
+ * Groovy 2.3 is in 2nd place with 22 points
+ * Jackson is in 3rd with 18 points
+
+Boon, Groovy 2.3 and Jackson were usually in the top three.
+
+Points
+
+| Tool | points |
+|:---|---:|
+| Boon | 28 |
+| Groovy  2.3 | 22 |
+| Jackson | 18 |
+| GSON | 3 |
+
+
+1st place
+
+| Tool | Count | points |
+|:---|---:|---:|
+|Boon |             7    |                            21 points |
+| Jackson |          3    |                            9 points |
+| Groovy 2.3   |   2       |                        6 points |
+
+
+
+____
+
+2nd place wins
+
+| Tool | Count | points |
+|:---|---:|---:|
+|Groovy 2.3   |  6    |                         12 points |
+| Boon     |         3       |                       6 points |
+| Jackson  |       3          |                    6 points |
+
+
+___
+
+3rd
+
+| Tool | Count | points |
+|:---|---:|---:|
+| Jackson     |  3               |             3 points |
+| Boon        |    2              |              2 points |
+| Groovy 2.3   |  4                |            4 points |
+| GSON        |  3                |            3 points |
+
+
+
 ## Results
 
 ### Serialization
