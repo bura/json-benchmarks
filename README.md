@@ -279,3 +279,155 @@ Jackson comes in fourth. Groovy 2.3 comes in 1st. Boon comes in second.
 ### Testing environment
 
 Intel® Core™ i5-2410M CPU @ 2.30GHz × 4, Ubuntu 14.04 (64-Bit), Oracle Java HotSpot 64-bit 1.7.0_55
+
+
+### Reran after using correct Boon API.
+
+
+Benchmark                                   (dataStyle) (resourceName)   Mode   Samples         Mean   Mean error    Units
+
+```
+o.b.b.j.DeserializationBenchmarks.boon              N/A          citys  thrpt         3      119.878       38.347    ops/s
+o.b.b.j.DeserializationBenchmarks.groovy            N/A          citys  thrpt         3       81.650       10.298    ops/s
+o.b.b.j.DeserializationBenchmarks.gson              N/A          citys  thrpt         3       36.861       11.953    ops/s
+o.b.b.j.DeserializationBenchmarks.jackson           N/A          citys  thrpt         3       32.539        4.830    ops/s
+```
+Boon 1st
+Groovy 2nd
+GSON 3rd
+Jackson 4th
+
+```
+o.b.b.j.DeserializationBenchmarks.boon              N/A          repos  thrpt         3     2486.011      526.536    ops/s
+o.b.b.j.DeserializationBenchmarks.groovy            N/A          repos  thrpt         3     2039.911      397.916    ops/s
+o.b.b.j.DeserializationBenchmarks.gson              N/A          repos  thrpt         3      631.072      192.594    ops/s
+o.b.b.j.DeserializationBenchmarks.jackson           N/A          repos  thrpt         3      774.239       97.302    ops/s
+```
+
+Boon 1st
+Groovy 2nd
+GSON 3rd
+Jackson 4th
+
+```
+o.b.b.j.DeserializationBenchmarks.boon              N/A           user  thrpt         3   119035.961   108745.360    ops/s
+o.b.b.j.DeserializationBenchmarks.groovy            N/A           user  thrpt         3    97794.467    98780.645    ops/s
+o.b.b.j.DeserializationBenchmarks.gson              N/A           user  thrpt         3    41816.689     6080.420    ops/s
+o.b.b.j.DeserializationBenchmarks.jackson           N/A           user  thrpt         3    39585.317      947.720    ops/s
+```
+
+Boon 1st
+Groovy 2nd
+GSON 3rd
+Jackson 4th
+
+```
+o.b.b.j.DeserializationBenchmarks.boon              N/A        request  thrpt         3  1650346.583  1196313.621    ops/s
+o.b.b.j.DeserializationBenchmarks.groovy            N/A        request  thrpt         3  1116275.272   343749.932    ops/s
+o.b.b.j.DeserializationBenchmarks.gson              N/A        request  thrpt         3   421626.794   149404.751    ops/s
+o.b.b.j.DeserializationBenchmarks.jackson           N/A        request  thrpt         3   131923.400    48612.733    ops/s
+```
+
+Boon 1st
+Groovy 2nd
+GSON 3rd
+Jackson 4th
+
+```
+o.b.b.j.SerializationBenchmarks.boon               pojo          citys  thrpt         3       32.400       32.652    ops/s
+o.b.b.j.SerializationBenchmarks.jackson            pojo          citys  thrpt         3       26.650       23.175    ops/s
+o.b.b.j.SerializationBenchmarks.groovy             pojo          citys  thrpt         3       25.878       32.884    ops/s
+o.b.b.j.SerializationBenchmarks.gson               pojo          citys  thrpt         3       16.222       18.204    ops/s
+```
+
+Boon 1st
+Jackson 2nd
+Groovy 3rd
+GSON 4th
+
+
+```
+o.b.b.j.SerializationBenchmarks.boon            maplist          citys  thrpt         3       32.778       31.189    ops/s
+o.b.b.j.SerializationBenchmarks.jackson         maplist          citys  thrpt         3       27.489       21.589    ops/s
+o.b.b.j.SerializationBenchmarks.groovy          maplist          citys  thrpt         3       23.589       27.332    ops/s
+o.b.b.j.SerializationBenchmarks.gson            maplist          citys  thrpt         3       17.722       25.695    ops/s
+```
+
+Boon 1st
+Jackson 2nd
+Groovy 3rd
+GSON 4th
+
+
+```
+o.b.b.j.SerializationBenchmarks.boon            maplist          repos  thrpt         3    34470.244    10772.279    ops/s
+o.b.b.j.SerializationBenchmarks.groovy          maplist          repos  thrpt         3      886.933     2939.992    ops/s
+o.b.b.j.SerializationBenchmarks.jackson         maplist          repos  thrpt         3      752.272      189.081    ops/s
+o.b.b.j.SerializationBenchmarks.gson            maplist          repos  thrpt         3      513.100     1155.307    ops/s
+```
+
+Boon 1st
+Groovy 2nd
+Jackson 3rd
+GSON 4th
+
+
+```
+o.b.b.j.SerializationBenchmarks.boon               pojo          repos  thrpt         3    32151.611     4627.428    ops/s
+o.b.b.j.SerializationBenchmarks.groovy             pojo          repos  thrpt         3     1028.711      862.186    ops/s
+o.b.b.j.SerializationBenchmarks.jackson            pojo          repos  thrpt         3      745.844      112.402    ops/s
+o.b.b.j.SerializationBenchmarks.gson               pojo          repos  thrpt         3      493.661      776.256    ops/s
+```
+
+Boon 1st
+Groovy 2nd
+Jackson 3rd
+GSON 4th
+
+```
+o.b.b.j.SerializationBenchmarks.boon               pojo           user  thrpt         3   537245.433   180860.354    ops/s
+o.b.b.j.SerializationBenchmarks.groovy             pojo           user  thrpt         3    73121.067   139658.513    ops/s
+o.b.b.j.SerializationBenchmarks.jackson            pojo           user  thrpt         3    66532.922    18507.313    ops/s
+o.b.b.j.SerializationBenchmarks.gson               pojo           user  thrpt         3    27090.911    66415.369    ops/s
+```
+
+Boon 1st
+Groovy 2nd
+Jackson 3rd
+GSON 4th
+
+```
+o.b.b.j.SerializationBenchmarks.boon               pojo        request  thrpt         3  1042914.389   136463.382    ops/s
+o.b.b.j.SerializationBenchmarks.jackson            pojo        request  thrpt         3   811418.117    26020.956    ops/s
+o.b.b.j.SerializationBenchmarks.groovy             pojo        request  thrpt         3   861108.894  2153449.601    ops/s
+o.b.b.j.SerializationBenchmarks.gson               pojo        request  thrpt         3   315327.694   977852.994    ops/s
+```
+Boon 1st
+Jackson 2nd
+Groovy 3rd
+GSON 4th
+
+```
+o.b.b.j.SerializationBenchmarks.boon            maplist           user  thrpt         3   538737.856   265746.558    ops/s
+o.b.b.j.SerializationBenchmarks.groovy          maplist           user  thrpt         3    64974.700    45477.358    ops/s
+o.b.b.j.SerializationBenchmarks.jackson         maplist           user  thrpt         3    68223.833     9345.587    ops/s
+o.b.b.j.SerializationBenchmarks.gson            maplist           user  thrpt         3    26400.811    64319.086    ops/s
+```
+
+Boon 1st
+Groovy 2nd
+Jackson 3rd
+GSON 4th
+
+```
+o.b.b.j.SerializationBenchmarks.boon            maplist        request  thrpt         3  1042648.739   284271.565    ops/s
+o.b.b.j.SerializationBenchmarks.jackson         maplist        request  thrpt         3   798186.711   112095.311    ops/s
+o.b.b.j.SerializationBenchmarks.groovy          maplist        request  thrpt         3   716448.322   742479.066    ops/s
+o.b.b.j.SerializationBenchmarks.gson            maplist        request  thrpt         3   303329.617   863298.236    ops/s
+```
+
+Boon 1st
+Jackson 2nd
+Groovy 3rd
+GSON 4th
+
