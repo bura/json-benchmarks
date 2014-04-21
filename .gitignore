@@ -1,7 +1,9 @@
-/build
-/bin
-/target
+build
+bin
+target
 .classpath
 .project
 .gradle
 .settings
+.idea
+*.iml

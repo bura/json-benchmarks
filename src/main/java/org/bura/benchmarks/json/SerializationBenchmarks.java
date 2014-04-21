@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
-import org.boon.json.JsonFactory;
+import org.boon.json.serializers.impl.JsonSimpleSerializerImpl;
 import org.bura.benchmarks.json.domain.CityInfo;
 import org.bura.benchmarks.json.domain.Repo;
 import org.bura.benchmarks.json.domain.Request;
@@ -106,16 +106,17 @@ public class SerializationBenchmarks {
         json.charAt(0);
     }
 
-    private final org.boon.json.ObjectMapper boon = JsonFactory.create();
+    private final JsonSimpleSerializerImpl boon = new JsonSimpleSerializerImpl();
 
     @GenerateMicroBenchmark
     public void boon() {
-        String json = boon.toJson(data);
+        String json = boon.serialize(data).toString();
         json.charAt(0);
     }
 
     /*
-     * Workaround for Groovy before 2.3. (http://jira.codehaus.org/browse/GROOVY-6633)
+     * Workaround for Groovy before 2.3.
+     * (http://jira.codehaus.org/browse/GROOVY-6633)
      */
     private boolean needCastToMap;
 

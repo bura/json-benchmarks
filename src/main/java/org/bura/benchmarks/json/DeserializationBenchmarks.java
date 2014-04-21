@@ -10,7 +10,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import org.boon.json.JsonFactory;
+import org.boon.json.JsonParser;
+import org.boon.json.implementation.JsonFastParser;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.GenerateMicroBenchmark;
 import org.openjdk.jmh.annotations.Level;
@@ -76,11 +77,11 @@ public class DeserializationBenchmarks {
         gson.fromJson(resource, gsonType);
     }
 
-    private final org.boon.json.ObjectMapper boon = JsonFactory.create();
+    private final JsonParser boon = new JsonFastParser();
 
     @GenerateMicroBenchmark
     public void boon() {
-        boon.fromJson(resource);
+        boon.parse(resource);
     }
 
     private final JsonSlurper groovy = new JsonSlurper();
