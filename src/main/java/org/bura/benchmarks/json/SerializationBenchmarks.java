@@ -1,7 +1,19 @@
 package org.bura.benchmarks.json;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import groovy.json.JsonOutput;
 import groovy.json.JsonSlurper;
+import org.boon.json.serializers.impl.JsonSimpleSerializerImpl;
+import org.bura.benchmarks.json.domain.CityInfo;
+import org.bura.benchmarks.json.domain.Repo;
+import org.bura.benchmarks.json.domain.Request;
+import org.bura.benchmarks.json.domain.UserProfile;
+import org.openjdk.jmh.annotations.*;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -11,31 +23,12 @@ import java.util.Map;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
-import org.boon.json.serializers.impl.JsonSimpleSerializerImpl;
-import org.bura.benchmarks.json.domain.CityInfo;
-import org.bura.benchmarks.json.domain.Repo;
-import org.bura.benchmarks.json.domain.Request;
-import org.bura.benchmarks.json.domain.UserProfile;
-import org.openjdk.jmh.annotations.BenchmarkMode;
-import org.openjdk.jmh.annotations.GenerateMicroBenchmark;
-import org.openjdk.jmh.annotations.Level;
-import org.openjdk.jmh.annotations.Mode;
-import org.openjdk.jmh.annotations.OutputTimeUnit;
-import org.openjdk.jmh.annotations.Param;
-import org.openjdk.jmh.annotations.Scope;
-import org.openjdk.jmh.annotations.Setup;
-import org.openjdk.jmh.annotations.State;
-
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 @State(Scope.Benchmark)
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.SECONDS)
+@Fork(value = 1, jvmArgsAppend = {"-Xmx2048m", "-server", "-XX:+AggressiveOpts"})
+@Measurement(iterations = 10, time = 3, timeUnit = TimeUnit.SECONDS)
+@Warmup(iterations = 20, time = 3, timeUnit = TimeUnit.SECONDS)
 public class SerializationBenchmarks {
 
     private static final String RESOURCE_CITYS = "citys";
@@ -48,8 +41,10 @@ public class SerializationBenchmarks {
 
     @Param({ RESOURCE_CITYS, RESOURCE_REPOS, RESOURCE_USER, RESOURCE_REQUEST })
     private String resourceName;
+
     @Param({ DATA_STYLE_POJO, DATA_STYLE_MAPLIST })
     private String dataStyle;
+
     private Object data;
 
     @Setup(Level.Iteration)
@@ -93,25 +88,22 @@ public class SerializationBenchmarks {
     private final ObjectMapper jacksonMapper = initMapper();
 
     @GenerateMicroBenchmark
-    public void jackson() throws JsonParseException, JsonMappingException, IOException {
-        String json = jacksonMapper.writeValueAsString(data);
-        json.charAt(0);
+    public String jackson() throws IOException {
+        return jacksonMapper.writeValueAsString(data);
     }
 
     private final Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ").create();
 
     @GenerateMicroBenchmark
-    public void gson() {
-        String json = gson.toJson(data);
-        json.charAt(0);
+    public String gson() {
+        return gson.toJson(data);
     }
 
     private final JsonSimpleSerializerImpl boon = new JsonSimpleSerializerImpl();
 
     @GenerateMicroBenchmark
-    public void boon() {
-        String json = boon.serialize(data).toString();
-        json.charAt(0);
+    public String boon() {
+        return boon.serialize(data).toString();
     }
 
     /*
@@ -121,13 +113,13 @@ public class SerializationBenchmarks {
     private boolean needCastToMap;
 
     @GenerateMicroBenchmark
-    public void groovy() {
+    public String groovy() {
         String json;
         if (needCastToMap) {
             json = JsonOutput.toJson((Map<?, ?>) data);
         } else {
             json = JsonOutput.toJson(data);
         }
-        json.charAt(0);
+        return json;
     }
 }
