@@ -44,7 +44,11 @@ On deserialization were tested only transformation from [String](http://docs.ora
 
 Where serialization points = throughput / maxPointsInGroup * 500 (500 for pojo and 500 for maplist) and deserialization points = throughput / maxPointsInGroup * 1000.
 
+### Summary chart
+
 ![Summary](http://chart.googleapis.com/chart?cht=bvo&chs=300x300&chd=t:2852,2041,7768,203,3944&chds=a&chxt=y&chdl=jackson|gson|boon|groovy|groovy-23&chco=FF5500|FFFF42|00FF00|C6D9FD|4D89F9)
+
+### Improving performance of JSON processing in Groovy
 
 ![Improving performance of JSON processing in Groovy](http://chart.googleapis.com/chart?cht=bvg&chs=300x300&chd=t:99,105|1691,2254&chds=a&chxt=x,y&chdl=groovy|groovy-23&chco=C6D9FD,4D89F9&chxl=0:|Seriali...|Deseriali...)
 
